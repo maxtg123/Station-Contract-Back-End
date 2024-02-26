@@ -1,0 +1,27 @@
+server:
+  port: 8088
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show_sql: true
+      format_sql: false
+      dialect: org.hibernate.dialect.Oracle12cDialect
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:1521:ORCL
+    username: hopdong
+    password: 050999
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  main:
+    allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+token:
+  expired:
+    time-in-days: 7
+jwt:
+  secret: springboot
+
